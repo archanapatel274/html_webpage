@@ -1,0 +1,64 @@
+javascript
+<html>
+	<head>
+			
+			<script type="text/javascript">
+				//a= document.getElementById("num1");
+				//b=document.getElementById("num2");
+				function sum()
+				{
+					a= document.getElementById("num1");
+					b=document.getElementById("num2");
+			
+					ans=a+b;
+					console.log(ans);
+					//document.getElementById("ans").value=ans;
+				}
+				//sum(2,3);
+				var arr=new Array;
+				function input()
+				{
+					for(i=0;i<10;i++){arr.push(i+1);}
+				}
+				input();
+				function sortfor()
+				{
+					for(var i=0;i<arr.length ;i++)
+					{
+						for(var j=0;j<i;j++)
+						{
+							var x=arr[i];
+							arr[i]=arr[j];
+							arr[j]=x;
+
+						}
+					}
+
+					console.log(arr);
+				}
+				sortfor();
+				function sortforeach()
+				{
+					arr.forEach(function (ele){
+					console.log(ele);
+					});
+				}
+				
+				//sortforeach();
+
+
+				function sortmap()
+				{
+					var mapnum =arr.map(x=>x *2);
+					console.log(mapnum);
+				}
+				sortmap();
+			</script>
+	</head>
+	<body>
+				<input id="num1">
+				<input id="num2">
+				<input id="ans">
+				<button onclick="sum()">sum</button>
+	</body>
+</html>
